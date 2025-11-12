@@ -1,4 +1,10 @@
 import { SignIn } from '@clerk/nextjs'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Đăng nhập - FinanceFirst VN',
+  description: 'Đăng nhập vào tài khoản FinanceFirst VN của bạn',
+}
 
 export default function SignInPage() {
   return (
