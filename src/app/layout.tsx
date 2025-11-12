@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
+import { viVN } from "@clerk/localizations";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
-      <body className="antialiased">
-        {children}
-      </body>
-    </html>
+    <ClerkProvider localization={viVN}>
+      <html lang="vi">
+        <body className="antialiased">
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
